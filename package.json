@@ -1,0 +1,35 @@
+{
+  "name": "grunt-formidable",
+  "version": "0.0.0",
+  "description": "Grunt plugin for the formidable static site generator",
+  "main": "tasks/formidable.js",
+  "author": "Mike Kibbel, Bandwidth.com",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Phonebooth/grunt-formidable.git"
+  },
+  "keywords": [
+    "grunt",
+    "static",
+    "site",
+    "generator",
+    "dynamic",
+    "content",
+    "swig"
+  ],
+
+  "bugs": {
+    "url": "https://github.com/Phonebooth/grunt-formidable/issues"
+  },
+  "homepage": "https://github.com/Phonebooth/grunt-formidable",
+  "dependencies": {
+    "formidable": "git+ssh://git@github.com:Phonebooth/formidable.git#v0.1.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  }
+}
