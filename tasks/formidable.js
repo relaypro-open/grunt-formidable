@@ -39,10 +39,10 @@ module.exports = function(grunt) {
 
             // Instantiate the formidable instance, invoke it and wait for the results.
             (require('formidable/settings')
+            // The simulated settings.js path.
+            .configure(path.join(options.root, 'settings.js'))
+            // The settings.
             .load(
-                // The simulated settings.js path.
-                path.join(options.root, 'settings.js'),
-                // The settings.
                 extend({}, options, {
                     log: {
                         info: function(message) {
