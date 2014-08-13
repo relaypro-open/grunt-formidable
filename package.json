@@ -1,6 +1,6 @@
 {
   "name": "grunt-formidable",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Grunt plugin for the formidable static site generator",
   "main": "tasks/formidable.js",
   "author": "Mike Kibbel, Bandwidth.com",
