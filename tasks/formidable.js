@@ -41,7 +41,7 @@ module.exports = function(grunt) {
             (require('formidable/settings')
             .load(
                 // The simulated settings.js path.
-                path.join(options.src, 'settings.js'),
+                path.join(options.root, 'settings.js'),
                 // The settings.
                 extend({}, options, {
                     log: {
