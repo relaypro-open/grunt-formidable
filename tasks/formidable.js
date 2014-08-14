@@ -55,7 +55,7 @@ module.exports = function(grunt) {
                             grunt.fail.fatal(message, code);
                         }
                     },
-                    verbose: grunt.option('verbose') || false
+                    verbose: grunt.option('verbose') || false,
                     debug: grunt.option('debug') || false
                 }))()
             .then(function() {
