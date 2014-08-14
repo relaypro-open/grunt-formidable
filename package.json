@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Phonebooth/grunt-formidable",
   "dependencies": {
-    "mercenary": "git+ssh://git@github.com:Phonebooth/mercenary.git#v0.1.1"
+    "mercenary": "git+ssh://git@github.com:Phonebooth/mercenary.git#v0.1.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.0"
