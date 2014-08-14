@@ -56,6 +56,7 @@ module.exports = function(grunt) {
                         }
                     },
                     verbose: grunt.option('verbose') || false
+                    debug: grunt.option('debug') || false
                 }))()
             .then(function() {
                 done(true);
