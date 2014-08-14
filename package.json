@@ -1,6 +1,6 @@
 {
   "name": "grunt-formidable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Grunt plugin for the formidable static site generator",
   "main": "tasks/formidable.js",
   "author": "Mike Kibbel, Bandwidth.com",
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Phonebooth/grunt-formidable",
   "dependencies": {
-    "mercenary": "git+ssh://git@github.com:Phonebooth/mercenary.git#v0.1.0"
+    "mercenary": "git+ssh://git@github.com:Phonebooth/mercenary.git#v0.1.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.0"
