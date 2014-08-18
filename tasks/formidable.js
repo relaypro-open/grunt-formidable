@@ -29,6 +29,9 @@ module.exports = function(grunt) {
                     // Global template context, useful for passing environment variables
                     // from grunt into a formidable project's templates.
                     context: null,
+                    // Context key name for the rendering metadata that will be passed into
+                    // template contexts. Defaults to 'meta'.
+                    meta: null,
                     // Plugins for swig.
                     swig: {
                         filters: {},
