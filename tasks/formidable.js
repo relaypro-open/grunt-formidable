@@ -26,6 +26,9 @@ module.exports = function(grunt) {
                     templates: null,
                     // The template rendering engine to use. Defaults to 'swig'.
                     templating: null,
+                    // Global template context, useful for passing environment variables
+                    // from grunt into a formidable project's templates.
+                    context: null,
                     // Plugins for swig.
                     swig: {
                         filters: {},
