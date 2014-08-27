@@ -2,7 +2,7 @@
 
 module.exports = function(grunt) {
     var path = require('path'),
-        lang = require('mercenary').lang,
+        lang = require('mercenary/lang'),
         extend = lang.extend;
 
     grunt.task.registerMultiTask(
@@ -21,11 +21,13 @@ module.exports = function(grunt) {
                     // The path to the top-level urls module with respect to the root and
                     // without the '.js' extension. Defaults to 'urls'.
                     urls: null,
-                    // Template directory globbing patterns for findiing directories in
-                    // addition to the standard '**/templates' pattern. Defaults to [].
+                    // Template directory globbing patterns, defaults to ['**/templates'].
                     templates: null,
                     // The template rendering engine to use. Defaults to 'swig'.
                     templating: null,
+                    // An object or array of two-tuples mapping plugin module names to their
+                    // configuration data.
+                    plugins: null,
                     // Global template context, useful for passing environment variables
                     // from grunt into a formidable project's templates.
                     context: null,
@@ -43,29 +45,38 @@ module.exports = function(grunt) {
                     overwrite: null
                 });
 
-            // Instantiate the formidable instance, invoke it and wait for the results.
-            (require('formidable/settings')
-            // A unique name for these settings.
-            .configure(path.join(options.root, this.nameArgs || 'default', 'settings.js'))
-            // The settings.
-            .load(
-                extend({}, options, {
-                    log: {
-                        info: function(message) {
-                            grunt.log.ok(message || '');
+            try {
+                // Instantiate the formidable instance, invoke it and wait for the results.
+                (require('formidable/settings')
+                // Create a unique name for these settings.
+                .configure(
+                    path.resolve(
+                        path.join(
+                            options.root,
+                            this.target || 'default',
+                            'settings.js')))
+                // Load the settings.
+                .load(
+                    extend({}, options, {
+                        log: {
+                            info: function(message) {
+                                grunt.log.ok(message || '');
+                            },
+                            warn: function(message) {
+                                grunt.log.error(message || '');
+                            },
+                            fail: function(message, code) {
+                                grunt.fail.fatal(message, code || 1);
+                            }
                         },
-                        warn: function(message) {
-                            grunt.log.error(message || '');
-                        },
-                        fail: function(message, code) {
-                            grunt.fail.fatal(message, code || 1);
-                        }
-                    },
-                    verbose: grunt.option('verbose') || false,
-                    debug: grunt.option('debug') || false
-                }))()
-            .then(function() {
-                done(true);
-            }));
+                        verbose: grunt.option('verbose') || false,
+                        debug: grunt.option('debug') || false
+                    }))()
+                .then(function() {
+                    done(true);
+                }));
+            } catch (error) {
+                grunt.fail.fatal(error.stack, 1);
+            }
         });
 };
