@@ -37,7 +37,7 @@ You can run this task with the `grunt formidable` command.
 
 ##### root
 
-Type: `String`
+Type: `String`<br>
 Default: `'src'`
 
 The path to the source files, with respect to the Gruntfile, that will be used by __formidable__
@@ -45,7 +45,7 @@ to build your site.
 
 ##### build
 
-Type: `String`
+Type: `String`<br>
 Default: `'build'`
 
 The path to the build directory, with respect to the Gruntfile, where __formidable__ will output
@@ -53,7 +53,7 @@ your generated site. It may not be a parent or a child of the `root` directory.
 
 ##### templates
 
-Type: `String`
+Type: `String` or `Array` of `String`s<br>
 Default: `'**/templates'`
 
 The glob pattern, with respect to the `root` directory, which __formidable__ will use to locate
