@@ -1,5 +1,5 @@
 {
-  "name": "grunt-formidable",
+  "name": "rw-grunt-formidable",
   "version": "0.2.3",
   "description": "Grunt plugin for the formidable static site generator",
   "main": "tasks/formidable.js",

@@ -5,7 +5,6 @@ The official Grunt plugin for the
 <a href="https://github.com/republicwireless-open/formidable" target="_blank">__formidable__</a>
 static site generator
 
-
 ## Getting Started
 
 This plugin requires Grunt `~0.4.0`
@@ -19,14 +18,14 @@ and use Grunt plugins. Once you're familiar with that process, you may install t
 this command:
 
 ```bash
-npm install grunt-formidable --save-dev
+npm install rw-grunt-formidable --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line
 of JavaScript:
 
 ```javascript
-grunt.loadNpmTasks('grunt-formidable');
+grunt.loadNpmTasks('rw-grunt-formidable');
 ```
 
 ### Formidable task

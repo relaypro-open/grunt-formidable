@@ -2,7 +2,7 @@
 
 module.exports = function(grunt) {
     var path = require('path'),
-        lang = require('mercenary/lang'),
+        lang = require('rw-mercenary/lang'),
         extend = lang.extend;
 
     grunt.task.registerMultiTask(
@@ -14,10 +14,10 @@ module.exports = function(grunt) {
                     // The root of the project, from which other paths will be resolved.
                     // Defaults to './src' with respect to the grunt base directory
                     // (usually the same as the grunt file).
-                    root: path.join('src'),
+                    root: 'src',
                     // The build directory into which the site's files will be generated.
                     // Defaults to '../build' with respect to the root.
-                    build: null,
+                    build: 'build',
                     // The path to the top-level urls module with respect to the root and
                     // without the '.js' extension. Defaults to 'urls'.
                     urls: null,
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 
             try {
                 // Instantiate the formidable instance, invoke it and wait for the results.
-                (require('formidable/settings')
+                (require('rw-formidable/settings')
                 // Create a unique name for these settings.
                 .configure(
                     path.resolve(
