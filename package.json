@@ -1,6 +1,6 @@
 {
   "name": "rw-grunt-formidable",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Grunt plugin for the formidable static site generator",
   "main": "tasks/formidable.js",
   "author": "Republic Wireless",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Phonebooth/grunt-formidable.git"
+    "url": "git://github.com/republicwireless-open/grunt-formidable.git"
   },
   "keywords": [
     "grunt",
@@ -25,18 +25,18 @@
     "swig"
   ],
   "bugs": {
-    "url": "https://github.com/Phonebooth/grunt-formidable/issues"
+    "url": "https://github.com/republicwireless-open/grunt-formidable/issues"
   },
-  "homepage": "https://github.com/Phonebooth/grunt-formidable",
+  "homepage": "https://github.com/republicwireless-open/grunt-formidable",
   "dependencies": {
-    "mercenary": "git+ssh://git@github.com:Phonebooth/mercenary.git#v0.1.1"
+    "rw-mercenary": "0.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.0",
     "grunt-contrib-jshint": "~0.10.0"
   },
   "peerDependencies": {
-    "grunt": "~0.4.0"
-  },
-  "private": true
+    "grunt": "~0.4.0",
+    "rw-formidable": "0.3.0"
+  }
 }
