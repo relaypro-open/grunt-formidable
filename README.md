@@ -71,7 +71,7 @@ module.exports = function(grunt) {
         formidable: {
             all: {
                 options: {
-                    src: 'source',
+                    root: 'src',
                     build: 'dist',
                     templates: '{articles,news,pages}/templates'
                 }
