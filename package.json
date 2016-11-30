@@ -1,6 +1,6 @@
 {
   "name": "rw-grunt-formidable",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "Grunt plugin for the formidable static site generator",
   "main": "tasks/formidable.js",
   "author": "Republic Wireless",
@@ -36,7 +36,7 @@
     "grunt-contrib-jshint": "~0.10.0"
   },
   "peerDependencies": {
-    "grunt": "~0.4.0",
-    "rw-formidable": "0.3.3"
+    "grunt": "~1",
+    "rw-formidable": "~0.4"
   }
 }

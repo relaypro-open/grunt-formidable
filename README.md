@@ -79,7 +79,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-formidable');
+    grunt.loadNpmTasks('rw-grunt-formidable');
 
     grunt.registerTask('build', ['formidable:all']);
 };
